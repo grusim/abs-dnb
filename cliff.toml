@@ -48,5 +48,7 @@ commit_parsers = [
   { message = "^chore", skip = true },
 ]
 filter_commits = false
-tag_pattern = "v[0-9].*"
+# `v` optional so it matches both `v0.1.0` tags and git-cliff's bare --bump
+# version (0.1.0) on the first release, when there is no prior tag to infer from.
+tag_pattern = "v?[0-9].*"
 sort_commits = "oldest"

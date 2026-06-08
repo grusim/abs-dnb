@@ -1,0 +1,25 @@
+# mise-en-place: pinned dev tools + task runner. https://mise.jdx.dev
+# Activate:  mise install   (then `mise run <task>`)
+[tools]
+python = "3.12"
+uv = "latest"
+git-cliff = "2.13.1"
+
+[tasks.setup]
+description = "Install dependencies and git hooks"
+run = [
+  "uv sync",
+  "uv run pre-commit install --install-hooks",
+]
+
+[tasks.test]
+description = "Run the test suite"
+run = "uv run pytest"
+
+[tasks.lint]
+description = "Run all pre-commit checks (lint, format, secret scan)"
+run = "uv run pre-commit run --all-files"
+
+[tasks.changelog]
+description = "Regenerate CHANGELOG.md (auto-bumps version from commits)"
+run = "git-cliff --bump -o CHANGELOG.md"
