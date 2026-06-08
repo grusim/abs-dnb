@@ -99,6 +99,13 @@ The README must prominently warn against public internet exposure.
 - **uv** for deterministic dependency management and fast Docker layer caching.
 - Single-stage Dockerfile; multi-arch (`linux/amd64`, `linux/arm64`) via
   `docker buildx`.
+- **Base image: `python:3.12-alpine`** (not `-slim`). The Debian slim image
+  ships `perl-base` 5.40.1, an Essential package that cannot be removed and
+  carries two upstream-unfixed HIGH CVEs (CVE-2026-48959, CVE-2026-48962,
+  observed via `docker scout cves` 2026-06-08). Alpine ships no perl, so the
+  image scans clean (0C/0H/0M/0L) and is smaller. The musl wheels for
+  `pydantic-core`/`uvloop` resolve cleanly and the full test suite passes inside
+  the image (verified 2026-06-08).
 
 ### Docker image + CI provenance / SBOM / cosign
 

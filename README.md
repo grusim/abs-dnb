@@ -55,10 +55,14 @@ cover sources.
 ## CI / Publishing
 
 Images are published to `docker.io/grusim/abs-dnb` on `v*` tag pushes via
-GitHub Actions. The workflow requires two repository secrets:
+GitHub Actions. The workflow requires **one** repository secret:
 
-- `DOCKERHUB_USERNAME` — your Docker Hub username
-- `DOCKERHUB_TOKEN` — a Docker Hub PAT with read+write scope
+- `DOCKERHUB_TOKEN` — a Docker Hub personal access token with Read & Write
+  scope (Docker Hub → Account settings → Personal access tokens → Generate).
+
+The Docker Hub username is the public `grusim` namespace, set as a literal in
+the workflow, so it is not a secret. Add the token under the GitHub repo:
+Settings → Secrets and variables → Actions → New repository secret.
 
 Images are signed with [cosign](https://github.com/sigstore/cosign) keyless
 signing (GitHub OIDC). Verify with:

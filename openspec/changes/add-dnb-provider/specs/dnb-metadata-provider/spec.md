@@ -85,6 +85,39 @@ MUST NOT return a placeholder/blank image URL.
 
 ---
 
+### Requirement: Media type SHALL be classified and filterable
+
+The service SHALL classify each record's medium from MARC RDA content/carrier
+fields (336 $b, 338 $b) and the leader, expose it as `mediaType`
+(`audiobook` | `ebook` | `print`), and accept an optional `format` query
+parameter that filters results to that medium. The `format` parameter SHALL
+accept German aliases (`Hörbuch` → audiobook, `Taschenbuch` → print) and SHALL
+ignore unrecognised values (returning unfiltered results).
+
+#### Scenario: Audiobook classified from spoken-word content type
+
+- **WHEN** a record has 336 $b = `spw` (gesprochenes Wort) or leader/06 = `i`
+- **THEN** its `mediaType` SHALL be `audiobook`
+
+#### Scenario: Print vs ebook distinguished by carrier type
+
+- **WHEN** a record has 336 $b = `txt` and 338 $b = `cr` (online resource)
+- **THEN** its `mediaType` SHALL be `ebook`
+- **AND WHEN** 338 $b is `nc` (volume) instead
+- **THEN** its `mediaType` SHALL be `print`
+
+#### Scenario: Format parameter filters by medium
+
+- **WHEN** `GET /search?query=Tintenherz&format=taschenbuch` is requested
+- **THEN** every returned match SHALL have `mediaType` equal to `print`
+
+#### Scenario: Unrecognised format value is ignored
+
+- **WHEN** `GET /search?query=Tintenherz&format=vinyl` is requested
+- **THEN** results SHALL NOT be filtered by medium (HTTP 200)
+
+---
+
 ### Requirement: The service SHALL operate without authentication
 
 The service SHALL NOT require an API key, token, or any `Authorization`
