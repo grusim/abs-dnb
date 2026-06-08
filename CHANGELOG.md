@@ -4,18 +4,24 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 Versioning: [Semantic Versioning](https://semver.org/)
-
-## [Unreleased]
-
-## [0.1.0] - planned
+## [0.1.0] - 2026-06-08
 
 ### Added
 
-- `GET /search` endpoint conforming to ABS custom-metadata-provider protocol
-- DNB SRU MARC21-xml metadata sourcing (title, author, narrator, publisher,
-  year, ISBN, series, language, genres)
-- Narrator populated from MARC21 relator code `$4 nrt`
-- Keyless cover chain: Amazon (ISBN-10) → iTunes Search API fallback
-- Placeholder-GIF rejection (byte-size guard)
-- Multi-arch Docker image (`linux/amd64`, `linux/arm64`)
-- GitHub Actions publish workflow with provenance, SBOM, cosign signing
+- Seed abs-dnb provider (openspec + scaffolding)
+- MARC21-xml to BookMetadata parser
+- Keyless cover chain (Amazon, iTunes)
+- DNB SRU client + search API
+
+### Documentation
+
+- README + openspec design/spec
+
+### Build & CI
+
+- Scaffold project + deps
+- Alpine container image
+- Publish signed multi-arch image on tags
+- Cut GitHub Release on tag publish
+- Pin actions to commit SHA (supply chain)
+
