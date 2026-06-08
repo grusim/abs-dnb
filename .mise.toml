@@ -1,7 +1,12 @@
 # mise-en-place: pinned dev tools + task runner. https://mise.jdx.dev
 # Activate:  mise install   (then `mise run <task>`)
+#
+# Python is intentionally NOT listed here: uv owns the interpreter (it fetches
+# CPython 3.14 per requires-python during `uv sync`). Letting mise also install
+# Python is redundant and currently hits a python-build-standalone artifact bug
+# on 3.14 (freethreaded build missing a `lib` dir). mise manages only the tools
+# uv does not — git-cliff (and uv itself).
 [tools]
-python = "3.12"
 uv = "latest"
 git-cliff = "2.13.1"
 
