@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/"><version>1.1</version><numberOfRecords>25</numberOfRecords><records><record><recordSchema>MARC21-xml</recordSchema><recordPacking>xml</recordPacking><recordData><record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000nim a2200000 cb4500</leader>
+    <controlfield tag="001">1225961351</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20251027110629.0</controlfield>
+    <controlfield tag="007">s|||||||||||||</controlfield>
+    <controlfield tag="007">cr||||||||||||</controlfield>
+    <controlfield tag="008">210129r20212011gw |||||o|||||||||||ger  </controlfield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1225961351</subfield>
+    </datafield>
+    <datafield tag="024" ind1="7" ind2=" ">
+      <subfield code="2">urn</subfield>
+      <subfield code="a">urn:nbn:de:101:1-2021020613292164419236</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1225961351</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1166</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">1247</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE</subfield>
+    </datafield>
+    <datafield tag="082" ind1="7" ind2="4">
+      <subfield code="8">2\p</subfield>
+      <subfield code="a">830</subfield>
+      <subfield code="a">B</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23sdnb</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+      <subfield code="b">historischer Roman ; gekürzte Lesung</subfield>
+      <subfield code="c">Sabine Ebert. Gelesen von Julia Fischer. Regie: Daniela Utecht</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Leipzig</subfield>
+      <subfield code="a">Frankfurt am Main</subfield>
+      <subfield code="b">Deutsche Nationalbibliothek</subfield>
+      <subfield code="c">2021</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 Online-Ressource (6 CDs (ca. 478 Min.))</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">gesprochenes Wort</subfield>
+      <subfield code="b">spw</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">Computermedien</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Online-Ressource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="490" ind1="1" ind2=" ">
+      <subfield code="a">Die große Hebammen-Saga</subfield>
+    </datafield>
+    <datafield tag="583" ind1="1" ind2=" ">
+      <subfield code="a">Archivierung/Langzeitarchivierung gewährleistet</subfield>
+      <subfield code="5">DE-101</subfield>
+      <subfield code="2">pdager</subfield>
+    </datafield>
+    <datafield tag="600" ind1="0" ind2="7">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="648" ind1=" " ind2="7">
+      <subfield code="a">Geschichte 1167-1169</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="a">Hebamme</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="a">Intrige</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="a">Freiberg</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Zielgruppe)Allgemein</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Zielgruppe)ab 16 Jahre</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-Produktgruppen)SD400</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Mittelalter</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Historischer Roman</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Liebe</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Meißen</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)1071854844</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1071854844</subfield>
+      <subfield code="0">(DE-101)1071854844</subfield>
+      <subfield code="a">Fiktionale Darstellung</subfield>
+      <subfield code="2">gnd-content</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-101)1010836978</subfield>
+      <subfield code="a">Historische Romane und Erzählungen</subfield>
+      <subfield code="2">gatbeg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="0">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="D">g</subfield>
+      <subfield code="a">Freiberg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="1">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="2">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Hebamme</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="3">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Intrige</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="4">
+      <subfield code="A">z</subfield>
+      <subfield code="a">Geschichte 1167-1169</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="5">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="0">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="D">p</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="1">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)115001727</subfield>
+      <subfield code="0">https://d-nb.info/gnd/115001727</subfield>
+      <subfield code="0">(DE-101)115001727</subfield>
+      <subfield code="a">Ebert, Sabine</subfield>
+      <subfield code="d">1958-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)114786674</subfield>
+      <subfield code="0">https://d-nb.info/gnd/114786674</subfield>
+      <subfield code="0">(DE-101)114786674</subfield>
+      <subfield code="a">Fischer, Julia</subfield>
+      <subfield code="d">1966-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">Utecht, Daniela</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+    </datafield>
+    <datafield tag="775" ind1="0" ind2="8">
+      <subfield code="i">Digitale Übertragung von</subfield>
+      <subfield code="t">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+      <subfield code="d">München : Audio Media, 2011</subfield>
+      <subfield code="h">6 CDs (ca. 478 Min.)</subfield>
+      <subfield code="w">(DE-101)1012863468</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">&#152;Die&#156; große Hebammen-Saga</subfield>
+      <subfield code="w">(DE-101)1225961343</subfield>
+      <subfield code="9">gedh</subfield>
+      <subfield code="7">am</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="u">https://nbn-resolving.org/urn:nbn:de:101:1-2021020613292164419236</subfield>
+      <subfield code="x">Resolving-System</subfield>
+    </datafield>
+    <datafield tag="856" ind1=" " ind2="0">
+      <subfield code="u">https://d-nb.info/1225961351/34</subfield>
+      <subfield code="x">Langzeitarchivierung Nationalbibliothek</subfield>
+    </datafield>
+    <datafield tag="883" ind1="2" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">dnb</subfield>
+      <subfield code="d">20200610</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="u">https://d-nb.info/provenance/plan#dnb</subfield>
+    </datafield>
+    <datafield tag="883" ind1="2" ind2=" ">
+      <subfield code="8">2\p</subfield>
+      <subfield code="a">dnb</subfield>
+      <subfield code="d">20251027</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="u">https://d-nb.info/provenance/plan#dnb</subfield>
+    </datafield>
+    <datafield tag="925" ind1="d" ind2=" ">
+      <subfield code="a">m006</subfield>
+    </datafield>
+    <datafield tag="927" ind1=" " ind2=" ">
+      <subfield code="a">424574976</subfield>
+    </datafield>
+  </record></recordData><recordPosition>1</recordPosition></record><record><recordSchema>MARC21-xml</recordSchema><recordPacking>xml</recordPacking><recordData><record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000nam a22000008c 4500</leader>
+    <controlfield tag="001">1253911304</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20250207071853.0</controlfield>
+    <controlfield tag="007">tu</controlfield>
+    <controlfield tag="008">220322s2021    xx ||||| |||| 00||||lit  </controlfield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1253911304</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9786094843631</subfield>
+      <subfield code="c">: EUR 19.99</subfield>
+      <subfield code="9">978-609-484-363-1</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1253911304</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1130</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">1130</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">lit</subfield>
+      <subfield code="h">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-LT</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="0">(DE-588)115001727</subfield>
+      <subfield code="0">https://d-nb.info/gnd/115001727</subfield>
+      <subfield code="0">(DE-101)115001727</subfield>
+      <subfield code="a">Ebert, Sabine</subfield>
+      <subfield code="d">1958-</subfield>
+      <subfield code="4">aut</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="240" ind1="1" ind2="0">
+      <subfield code="a">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Pribuvėjos paslaptis</subfield>
+      <subfield code="b">romanas</subfield>
+      <subfield code="c">Sabine Ebert ; iš vokiečių kalbos vertė UAB „Datatex“ = Das Geheimnis der Hebamme &lt;lit.></subfield>
+    </datafield>
+    <datafield tag="263" ind1=" " ind2=" ">
+      <subfield code="a">202207</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Kaunas</subfield>
+      <subfield code="b">Obuolys</subfield>
+      <subfield code="c">2021</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">560 Seiten</subfield>
+    </datafield>
+    <datafield tag="883" ind1=" " ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">cgwrk</subfield>
+      <subfield code="d">20220812</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="u">https://d-nb.info/provenance/plan#cgwrk</subfield>
+    </datafield>
+    <datafield tag="925" ind1="r" ind2=" ">
+      <subfield code="a">ru</subfield>
+    </datafield>
+    <datafield tag="925" ind1="w" ind2=" ">
+      <subfield code="a">e</subfield>
+    </datafield>
+  </record></recordData><recordPosition>2</recordPosition></record><record><recordSchema>MARC21-xml</recordSchema><recordPacking>xml</recordPacking><recordData><record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000nim a2200000 c 4500</leader>
+    <controlfield tag="001">1220937312</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20220921170404.0</controlfield>
+    <controlfield tag="007">s|||||||||||||</controlfield>
+    <controlfield tag="007">cr||||||||||||</controlfield>
+    <controlfield tag="008">201106r20202011gw |||||o|||||||||||ger  </controlfield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1220937312</subfield>
+    </datafield>
+    <datafield tag="024" ind1="7" ind2=" ">
+      <subfield code="2">urn</subfield>
+      <subfield code="a">urn:nbn:de:101:1-2020111913573650357635</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1220937312</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1166</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">1140</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE</subfield>
+    </datafield>
+    <datafield tag="082" ind1="7" ind2="4">
+      <subfield code="a">830</subfield>
+      <subfield code="a">B</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23sdnb</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+      <subfield code="b">historischer Roman ; gekürzte Lesung</subfield>
+      <subfield code="c">Sabine Ebert. Gelesen von Julia Fischer</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Leipzig</subfield>
+      <subfield code="a">Frankfurt am Main</subfield>
+      <subfield code="b">Deutsche Nationalbibliothek</subfield>
+      <subfield code="c">2020</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 Online-Ressource (6 CDs (ca. 478 Min.))</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">gesprochenes Wort</subfield>
+      <subfield code="b">spw</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">Computermedien</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Online-Ressource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="583" ind1="1" ind2=" ">
+      <subfield code="a">Archivierung/Langzeitarchivierung gewährleistet</subfield>
+      <subfield code="5">DE-101</subfield>
+      <subfield code="2">pdager</subfield>
+    </datafield>
+    <datafield tag="600" ind1="0" ind2="7">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="648" ind1=" " ind2="7">
+      <subfield code="a">Geschichte 1167-1169</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="a">Hebamme</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="a">Intrige</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="a">Freiberg</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Zielgruppe)Allgemein</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Zielgruppe)ab 16 Jahre</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(VLB-Produktgruppen)SD400</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Mittelalter</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Hebamme</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Ritter</subfield>
+    </datafield>
+    <datafield tag="653" ind1=" " ind2=" ">
+      <subfield code="a">(Keywords)Historischer Roman</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)1071854844</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1071854844</subfield>
+      <subfield code="0">(DE-101)1071854844</subfield>
+      <subfield code="a">Fiktionale Darstellung</subfield>
+      <subfield code="2">gnd-content</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-101)1010836978</subfield>
+      <subfield code="a">Historische Romane und Erzählungen</subfield>
+      <subfield code="2">gatbeg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="0">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="D">g</subfield>
+      <subfield code="a">Freiberg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="1">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="2">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Hebamme</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="3">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Intrige</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="4">
+      <subfield code="A">z</subfield>
+      <subfield code="a">Geschichte 1167-1169</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="5">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="0">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="D">p</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="1">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)115001727</subfield>
+      <subfield code="0">https://d-nb.info/gnd/115001727</subfield>
+      <subfield code="0">(DE-101)115001727</subfield>
+      <subfield code="a">Ebert, Sabine</subfield>
+      <subfield code="d">1958-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)114786674</subfield>
+      <subfield code="0">https://d-nb.info/gnd/114786674</subfield>
+      <subfield code="0">(DE-101)114786674</subfield>
+      <subfield code="a">Fischer, Julia</subfield>
+      <subfield code="d">1966-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="775" ind1="0" ind2="8">
+      <subfield code="i">Digitale Übertragung von</subfield>
+      <subfield code="t">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+      <subfield code="d">München : Audio Media, 2011</subfield>
+      <subfield code="h">6 CDs (ca. 478 Min.)</subfield>
+      <subfield code="w">(DE-101)1009023691</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="u">https://nbn-resolving.org/urn:nbn:de:101:1-2020111913573650357635</subfield>
+      <subfield code="x">Resolving-System</subfield>
+    </datafield>
+    <datafield tag="856" ind1=" " ind2="0">
+      <subfield code="u">https://d-nb.info/1220937312/34</subfield>
+      <subfield code="x">Langzeitarchivierung Nationalbibliothek</subfield>
+    </datafield>
+    <datafield tag="925" ind1="d" ind2=" ">
+      <subfield code="a">m006</subfield>
+    </datafield>
+    <datafield tag="927" ind1=" " ind2=" ">
+      <subfield code="a">424574976</subfield>
+    </datafield>
+  </record></recordData><recordPosition>3</recordPosition></record><record><recordSchema>MARC21-xml</recordSchema><recordPacking>xml</recordPacking><recordData><record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000nim a2200000 c 4500</leader>
+    <controlfield tag="001">1198788275</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20220921090712.0</controlfield>
+    <controlfield tag="007">s|||||||||||||</controlfield>
+    <controlfield tag="007">cr||||||||||||</controlfield>
+    <controlfield tag="008">191104r20192007gw |||||o|||||||||||ger  </controlfield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1198788275</subfield>
+    </datafield>
+    <datafield tag="024" ind1="7" ind2=" ">
+      <subfield code="2">urn</subfield>
+      <subfield code="a">urn:nbn:de:101:1-2019111417011330560457</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1198788275</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)1197153269</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1166</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">1140</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE</subfield>
+    </datafield>
+    <datafield tag="082" ind1="7" ind2="4">
+      <subfield code="a">830</subfield>
+      <subfield code="a">B</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23sdnb</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+      <subfield code="c">Sabine Ebert. Gelesen von Julia Fischer</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Leipzig</subfield>
+      <subfield code="a">Frankfurt am Main</subfield>
+      <subfield code="b">Deutsche Nationalbibliothek</subfield>
+      <subfield code="c">2019</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 Online-Ressource (6 CDs)</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">gesprochenes Wort</subfield>
+      <subfield code="b">spw</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">Computermedien</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Online-Ressource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="583" ind1="1" ind2=" ">
+      <subfield code="a">Archivierung/Langzeitarchivierung gewährleistet</subfield>
+      <subfield code="5">DE-101</subfield>
+      <subfield code="2">pdager</subfield>
+    </datafield>
+    <datafield tag="600" ind1="0" ind2="7">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="648" ind1=" " ind2="7">
+      <subfield code="a">Geschichte 1167-1169</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="a">Hebamme</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="a">Intrige</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="a">Freiberg</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)1071854844</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1071854844</subfield>
+      <subfield code="0">(DE-101)1071854844</subfield>
+      <subfield code="a">Fiktionale Darstellung</subfield>
+      <subfield code="2">gnd-content</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-101)1010836978</subfield>
+      <subfield code="a">Historische Romane und Erzählungen</subfield>
+      <subfield code="2">gatbeg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="0">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="D">g</subfield>
+      <subfield code="a">Freiberg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="1">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="2">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Hebamme</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="3">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Intrige</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="4">
+      <subfield code="A">z</subfield>
+      <subfield code="a">Geschichte 1167-1169</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="5">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="0">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="D">p</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="1">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)115001727</subfield>
+      <subfield code="0">https://d-nb.info/gnd/115001727</subfield>
+      <subfield code="0">(DE-101)115001727</subfield>
+      <subfield code="a">Ebert, Sabine</subfield>
+      <subfield code="d">1958-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)114786674</subfield>
+      <subfield code="0">https://d-nb.info/gnd/114786674</subfield>
+      <subfield code="0">(DE-101)114786674</subfield>
+      <subfield code="a">Fischer, Julia</subfield>
+      <subfield code="d">1966-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="775" ind1="0" ind2="8">
+      <subfield code="i">Digitale Übertragung von</subfield>
+      <subfield code="t">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+      <subfield code="d">Berg : AME Hören, 2007</subfield>
+      <subfield code="h">6 CDs</subfield>
+      <subfield code="w">(DE-101)984639403</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="u">https://nbn-resolving.org/urn:nbn:de:101:1-2019111417011330560457</subfield>
+      <subfield code="x">Resolving-System</subfield>
+    </datafield>
+    <datafield tag="856" ind1=" " ind2="0">
+      <subfield code="u">https://d-nb.info/1198788275/34</subfield>
+      <subfield code="x">Langzeitarchivierung Nationalbibliothek</subfield>
+    </datafield>
+    <datafield tag="925" ind1="d" ind2=" ">
+      <subfield code="a">m006</subfield>
+    </datafield>
+    <datafield tag="927" ind1=" " ind2=" ">
+      <subfield code="a">424574976</subfield>
+    </datafield>
+  </record></recordData><recordPosition>4</recordPosition></record><record><recordSchema>MARC21-xml</recordSchema><recordPacking>xml</recordPacking><recordData><record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+    <leader>00000nim a2200000 c 4500</leader>
+    <controlfield tag="001">1194108156</controlfield>
+    <controlfield tag="003">DE-101</controlfield>
+    <controlfield tag="005">20220921082248.0</controlfield>
+    <controlfield tag="007">s|||||||||||||</controlfield>
+    <controlfield tag="007">cr||||||||||||</controlfield>
+    <controlfield tag="008">190904r20192007gw |||||o|||||||||||ger  </controlfield>
+    <datafield tag="016" ind1="7" ind2=" ">
+      <subfield code="2">DE-101</subfield>
+      <subfield code="a">1194108156</subfield>
+    </datafield>
+    <datafield tag="024" ind1="7" ind2=" ">
+      <subfield code="2">urn</subfield>
+      <subfield code="a">urn:nbn:de:101:1-2019091420154396119823</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(DE-599)DNB1194108156</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)1190117978</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">1166</subfield>
+      <subfield code="b">ger</subfield>
+      <subfield code="c">DE-101</subfield>
+      <subfield code="d">1140</subfield>
+    </datafield>
+    <datafield tag="041" ind1=" " ind2=" ">
+      <subfield code="a">ger</subfield>
+    </datafield>
+    <datafield tag="044" ind1=" " ind2=" ">
+      <subfield code="c">XA-DE</subfield>
+    </datafield>
+    <datafield tag="082" ind1="7" ind2="4">
+      <subfield code="a">830</subfield>
+      <subfield code="a">B</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="2">23sdnb</subfield>
+    </datafield>
+    <datafield tag="245" ind1="0" ind2="0">
+      <subfield code="a">Julia Fischer liest Sabine Ebert, Das Geheimnis der Hebamme</subfield>
+      <subfield code="c">Kürzung: Julia Fischer. Tonregie: Daniela Utecht</subfield>
+    </datafield>
+    <datafield tag="246" ind1="3" ind2=" ">
+      <subfield code="a">&#152;Das&#156; Geheimnis der Hebamme</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">Leipzig</subfield>
+      <subfield code="a">Frankfurt am Main</subfield>
+      <subfield code="b">Deutsche Nationalbibliothek</subfield>
+      <subfield code="c">2019</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">1 Online-Ressource (6 CDs)</subfield>
+      <subfield code="b">DDD</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">gesprochenes Wort</subfield>
+      <subfield code="b">spw</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">Computermedien</subfield>
+      <subfield code="b">c</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">Online-Ressource</subfield>
+      <subfield code="b">cr</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="500" ind1=" " ind2=" ">
+      <subfield code="a">Reproduktion von: Gekürzte Romanfassung</subfield>
+    </datafield>
+    <datafield tag="583" ind1="1" ind2=" ">
+      <subfield code="a">Archivierung/Langzeitarchivierung gewährleistet</subfield>
+      <subfield code="5">DE-101</subfield>
+      <subfield code="2">pdager</subfield>
+    </datafield>
+    <datafield tag="600" ind1="0" ind2="7">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="648" ind1=" " ind2="7">
+      <subfield code="a">Geschichte 1167-1169</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="a">Hebamme</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="a">Intrige</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="651" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="a">Freiberg</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-588)1071854844</subfield>
+      <subfield code="0">https://d-nb.info/gnd/1071854844</subfield>
+      <subfield code="0">(DE-101)1071854844</subfield>
+      <subfield code="a">Fiktionale Darstellung</subfield>
+      <subfield code="2">gnd-content</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="a">Belletristische Darstellung</subfield>
+      <subfield code="9">rswk-swf</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="655" ind1=" " ind2="7">
+      <subfield code="0">(DE-101)1010836978</subfield>
+      <subfield code="a">Historische Romane und Erzählungen</subfield>
+      <subfield code="2">gatbeg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="0">
+      <subfield code="0">(DE-588)4018266-6</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4018266-6</subfield>
+      <subfield code="0">(DE-101)040182665</subfield>
+      <subfield code="D">g</subfield>
+      <subfield code="a">Freiberg</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="1">
+      <subfield code="0">(DE-588)4181304-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4181304-2</subfield>
+      <subfield code="0">(DE-101)041813049</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Silberbergbau</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="2">
+      <subfield code="0">(DE-588)4023909-3</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4023909-3</subfield>
+      <subfield code="0">(DE-101)040239098</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Hebamme</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="3">
+      <subfield code="0">(DE-588)4126402-2</subfield>
+      <subfield code="0">https://d-nb.info/gnd/4126402-2</subfield>
+      <subfield code="0">(DE-101)041264029</subfield>
+      <subfield code="D">s</subfield>
+      <subfield code="a">Intrige</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="4">
+      <subfield code="A">z</subfield>
+      <subfield code="a">Geschichte 1167-1169</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2="5">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="0" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="0">
+      <subfield code="0">(DE-588)13754037X</subfield>
+      <subfield code="0">https://d-nb.info/gnd/13754037X</subfield>
+      <subfield code="0">(DE-101)13754037X</subfield>
+      <subfield code="D">p</subfield>
+      <subfield code="a">Otto</subfield>
+      <subfield code="c">Meißen, Markgraf</subfield>
+      <subfield code="d">1125-1190</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2="1">
+      <subfield code="A">f</subfield>
+      <subfield code="a">Belletristische Darstellung</subfield>
+    </datafield>
+    <datafield tag="689" ind1="1" ind2=" ">
+      <subfield code="5">DE-101</subfield>
+      <subfield code="5">DE-101</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)115001727</subfield>
+      <subfield code="0">https://d-nb.info/gnd/115001727</subfield>
+      <subfield code="0">(DE-101)115001727</subfield>
+      <subfield code="a">Ebert, Sabine</subfield>
+      <subfield code="d">1958-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="0">(DE-588)114786674</subfield>
+      <subfield code="0">https://d-nb.info/gnd/114786674</subfield>
+      <subfield code="0">(DE-101)114786674</subfield>
+      <subfield code="a">Fischer, Julia</subfield>
+      <subfield code="d">1966-</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield tag="700" ind1="1" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">Utecht, Daniela</subfield>
+      <subfield code="e">Mitwirkender</subfield>
+      <subfield code="4">ctb</subfield>
+    </datafield>
+    <datafield tag="775" ind1="0" ind2="8">
+      <subfield code="i">Digitale Übertragung von</subfield>
+      <subfield code="t">Julia Fischer liest Sabine Ebert, Das Geheimnis der Hebamme</subfield>
+      <subfield code="d">Augsburg : Weltbild, 2007</subfield>
+      <subfield code="h">6 CDs, DDD</subfield>
+      <subfield code="w">(DE-101)984609687</subfield>
+      <subfield code="b">Gekürzte Romanfassung</subfield>
+    </datafield>
+    <datafield tag="850" ind1=" " ind2=" ">
+      <subfield code="a">DE-101a</subfield>
+      <subfield code="a">DE-101b</subfield>
+    </datafield>
+    <datafield tag="856" ind1="4" ind2="0">
+      <subfield code="u">https://nbn-resolving.org/urn:nbn:de:101:1-2019091420154396119823</subfield>
+      <subfield code="x">Resolving-System</subfield>
+    </datafield>
+    <datafield tag="856" ind1=" " ind2="0">
+      <subfield code="u">https://d-nb.info/1194108156/34</subfield>
+      <subfield code="x">Langzeitarchivierung Nationalbibliothek</subfield>
+    </datafield>
+    <datafield tag="883" ind1="2" ind2=" ">
+      <subfield code="8">1\p</subfield>
+      <subfield code="a">dnb</subfield>
+      <subfield code="d">20200612</subfield>
+      <subfield code="q">DE-101</subfield>
+      <subfield code="u">https://d-nb.info/provenance/plan#dnb</subfield>
+    </datafield>
+    <datafield tag="925" ind1="d" ind2=" ">
+      <subfield code="a">m006</subfield>
+    </datafield>
+    <datafield tag="927" ind1=" " ind2=" ">
+      <subfield code="a">424574976</subfield>
+    </datafield>
+  </record></recordData><recordPosition>5</recordPosition></record></records><nextRecordPosition>6</nextRecordPosition><echoedSearchRetrieveRequest><version>1.1</version><query>TIT=Das Geheimnis der Hebamme and PER=Ebert</query><xQuery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><maximumRecords>5</maximumRecords><recordSchema>MARC21-xml</recordSchema></echoedSearchRetrieveRequest></searchRetrieveResponse>

@@ -95,6 +95,31 @@ def test_media_type_ebook_from_txt_online(vorleser):
     assert types == ["ebook", "ebook", "ebook", "ebook", "print"]
 
 
+def test_record_with_700_missing_subfield_a_does_not_crash(fixture_bytes):
+    # Regression: a 700 with $4=aut but no $a previously raised KeyError
+    # (pymarc field["a"]) and 500'd the whole search (repro: query=Harry Potter).
+    records = parse_records(fixture_bytes("missing-subfield-a.xml"))
+    assert len(records) == 1
+    assert records[0]["title"] == "Harry Potter Test"
+    assert "author" not in records[0]  # 700 had no $a -> author omitted
+
+
+def test_hebamme_ebert_found_via_tit_per(hebamme_ebert):
+    # WOE returned 0; TIT=… and PER=Ebert returns matches.
+    records = parse_records(hebamme_ebert)
+    assert len(records) >= 1
+    assert records[0]["author"] == "Ebert, Sabine"
+
+
+def test_espresso_luciani_found_via_tit_per(espresso_luciani):
+    # Regression for the WOE-strategy miss: "Kein Espresso für Commissario
+    # Luciani" / Paglieri returned 0 under WOE, 5 under TIT=… and PER=….
+    records = parse_records(espresso_luciani)
+    assert len(records) >= 1
+    assert all("Kein Espresso" in r["title"] for r in records)
+    assert records[0]["author"] == "Paglieri, Claudio"
+
+
 def test_empty_response_yields_no_records():
     empty = (
         b'<?xml version="1.0"?>'

@@ -9,6 +9,8 @@ header is accepted and ignored. Do not expose this service to the public interne
 
 from __future__ import annotations
 
+import asyncio
+import logging
 from collections.abc import Awaitable, Callable
 from importlib.metadata import PackageNotFoundError, version
 
@@ -18,6 +20,13 @@ from . import dnb
 from .covers import resolve_cover
 
 CoverResolver = Callable[[dict], Awaitable[str | None]]
+
+logger = logging.getLogger("abs_dnb.main")
+
+# Cap results presented to ABS and bound per-cover latency so one slow/missing
+# cover never delays or breaks the whole response.
+MAX_RESULTS = 15
+COVER_TIMEOUT = 8.0
 
 try:
     APP_VERSION = version("abs-dnb")  # single source of truth: pyproject.toml
@@ -62,11 +71,27 @@ async def search(
     ),
     resolve: CoverResolver = Depends(get_cover_resolver),
 ) -> dict:
-    matches = await dnb.search(
-        query, author=author, language=language, book_format=format
-    )
-    for match in matches:
-        cover = await resolve(match)
+    # The protocol requires {"matches": [...]} — never a 500. Any unexpected
+    # failure degrades to an empty list.
+    try:
+        matches = await dnb.search(
+            query, author=author, language=language, book_format=format
+        )
+    except Exception as exc:
+        logger.warning("search failed for %r: %s", query, exc)
+        return {"matches": []}
+
+    matches = matches[:MAX_RESULTS]
+
+    async def _attach_cover(match: dict) -> None:
+        try:
+            cover = await asyncio.wait_for(resolve(match), timeout=COVER_TIMEOUT)
+        except Exception as exc:  # slow/failing cover -> omit it, keep the match
+            logger.info("cover lookup failed for %r: %s", match.get("title"), exc)
+            cover = None
         if cover:
             match["cover"] = cover
+
+    # Resolve all covers concurrently; bounded by COVER_TIMEOUT per item.
+    await asyncio.gather(*(_attach_cover(m) for m in matches))
     return {"matches": matches}

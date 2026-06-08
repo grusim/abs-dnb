@@ -2,16 +2,16 @@
 
 Endpoint: https://services.dnb.de/sru/dnb (SRU 1.1, CQL, MARC21-xml, keyless).
 
-CQL strategy (task 12): we use the all-words index ``WOE=<terms>``. This is the
-index proven live on 2026-06-08 (the captured fixtures echo
-``<query>WOE=Leises Gift Iles</query>``). The precise ``TIT=`` / ``VER=`` indexes
-were evaluated as an alternative: at this scale they trade recall for precision
-without a measurable gain on the captured fixtures, so ``WOE`` is retained for
-robustness against title/author phrasing differences.
+CQL strategy: the precise indices ``TIT=<title>`` (title) and ``PER=<person>``
+(author). Verified live 2026-06-09 that these beat the all-words ``WOE=`` index
+on both recall and the failure case: "Kein Espresso für Commissario Luciani" /
+Paglieri returned 0 under ``WOE`` but 5 under ``TIT=… and PER=…`` (and existing
+probes returned more, e.g. Leises Gift / Iles 1 -> 10). When an author is given
+and the combined query yields nothing (the author may be a name variant or
+absent from the record), the search retries with ``TIT=`` alone before giving up.
 
-Language filter (task 13): opt-in via the ``language`` argument. We filter
-client-side on the parsed MARC 041 $a value rather than guessing a DNB CQL
-language index, keeping the query string to the proven ``WOE`` form.
+Language filter: opt-in via the ``language`` argument, applied client-side on
+the parsed MARC 041 $a value rather than guessing a DNB CQL language index.
 
 Graceful degradation: any network error, timeout, or non-200 response returns an
 empty list (the route surfaces HTTP 200 with ``{"matches": []}``). DNB publishes
@@ -58,10 +58,23 @@ def normalize_format(value: str | None) -> str | None:
 
 
 def build_cql(query: str, author: str | None = None) -> str:
-    terms = query.strip()
+    title = query.strip()
     if author and author.strip():
-        terms = f"{terms} {author.strip()}"
-    return f"WOE={terms}"
+        return f"TIT={title} and PER={author.strip()}"
+    return f"TIT={title}"
+
+
+async def _fetch(cql: str, max_records: int, client: httpx.AsyncClient) -> list[dict]:
+    params = {
+        "version": "1.1",
+        "operation": "searchRetrieve",
+        "query": cql,  # httpx URL-encodes the value (= -> %3D, spaces -> %20)
+        "recordSchema": "MARC21-xml",
+        "maximumRecords": str(max_records),
+    }
+    response = await client.get(SRU_BASE, params=params)
+    response.raise_for_status()
+    return parse_records(response.content)
 
 
 async def search(
@@ -79,21 +92,15 @@ async def search(
     "Hörbuch"/"Taschenbuch") filters results client-side on the parsed mediaType.
     An unrecognised format value is ignored (no filtering applied).
     """
-    params = {
-        "version": "1.1",
-        "operation": "searchRetrieve",
-        "query": build_cql(query, author),
-        "recordSchema": "MARC21-xml",
-        "maximumRecords": str(max_records),
-    }
-
+    has_author = bool(author and author.strip())
     owns_client = client is None
     if owns_client:
         client = httpx.AsyncClient(timeout=DEFAULT_TIMEOUT)
     try:
-        response = await client.get(SRU_BASE, params=params)
-        response.raise_for_status()
-        records = parse_records(response.content)
+        records = await _fetch(build_cql(query, author), max_records, client)
+        if not records and has_author:
+            # TIT+PER too strict (author variant/missing) -> retry title alone.
+            records = await _fetch(build_cql(query), max_records, client)
     except httpx.HTTPError as exc:
         logger.warning("DNB SRU request failed: %s", exc)
         return []

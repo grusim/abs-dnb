@@ -27,10 +27,13 @@ Notes from fixtures:
 from __future__ import annotations
 
 import io
+import logging
 import re
 import unicodedata
 
 from pymarc import marcxml
+
+logger = logging.getLogger("abs_dnb.marc")
 
 # C1 control range; covers MARC non-sort markers \x98 (NSB) and \x9c (NSE).
 _C1 = re.compile(r"[\x80-\x9f]")
@@ -55,7 +58,7 @@ def _first_subfield(record, tag: str, code: str) -> str:
 def _name_with_relator(record, relator: str) -> str:
     for field in record.get_fields("700"):
         if relator in field.get_subfields("4"):
-            return _clean(field["a"])
+            return _clean(field.get("a"))
     return ""
 
 
@@ -71,7 +74,7 @@ def _author(record) -> str:
     # listed first, but this can misattribute if another contributor appears
     # first. Better a best-effort author than none for ABS matching.
     for field in record.get_fields("700"):
-        name = _clean(field["a"])
+        name = _clean(field.get("a"))
         if name:
             return name
     return ""
@@ -226,7 +229,11 @@ def parse_records(xml: bytes | str) -> list[dict]:
     for record in records:
         if record is None:
             continue
-        mapped = _map_record(record)
+        try:
+            mapped = _map_record(record)
+        except Exception as exc:  # one malformed record must not sink the search
+            logger.warning("skipping unparseable MARC record: %s", exc)
+            continue
         if mapped is not None:
             out.append(mapped)
     return out
