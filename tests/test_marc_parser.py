@@ -15,12 +15,12 @@ def test_leises_gift_single_record_title_and_isbn(leises_gift):
     assert rec["language"] == "ger"
 
 
-def test_leises_gift_author_omitted_when_only_contributors(leises_gift):
-    # All 700 entries carry $4=ctb (Mitwirkender); no 100 and no $4=aut.
-    # Author cannot be disambiguated, so it is omitted rather than guessed.
+def test_leises_gift_author_falls_back_to_first_contributor(leises_gift):
+    # No 100 and no 700 $4=aut (all ctb); fall back to the first 700 contributor.
+    # Heuristic — the author is usually listed first.
     rec = parse_records(leises_gift)[0]
-    assert "author" not in rec
-    assert "narrator" not in rec
+    assert rec["author"] == "Iles, Greg"
+    assert "narrator" not in rec  # Reins is ctb, not nrt
 
 
 def test_title_strips_marc_nonsort_control_chars(saeulen):

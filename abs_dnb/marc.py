@@ -5,7 +5,7 @@ Field mapping derived from real DNB SRU records (fixtures captured 2026-06-08):
 | ABS field     | MARC source                                              |
 | ------------- | -------------------------------------------------------- |
 | title         | 245 $a (+ $b subtitle)                                   |
-| author        | 100 $a; else first 700 $a with $4=aut; else omitted      |
+| author        | 100 $a; else 700 $4=aut; else first 700 $a (best-effort) |
 | narrator      | first 700 $a with $4=nrt                                 |
 | publisher     | first 264 carrying $b -> $b                              |
 | publishedYear | first 264 $c (4-digit year extracted)                    |
@@ -18,9 +18,10 @@ Notes from fixtures:
 - pymarc.parse_xml_to_array yields ``None`` for the SRW wrapper elements; drop them.
 - Titles carry MARC non-sort control chars (U+0098 NSB / U+009C NSE) that must be
   stripped (e.g. "\\x98Die\\x9c Saeulen der Erde" -> "Die Saeulen der Erde").
-- author is omitted (not guessed) when there is no 100 and no 700 $4=aut: such
-  records (e.g. ``leises-gift``) carry only $4=ctb contributors that cannot be
-  disambiguated into author/narrator/translator.
+- author falls back to the first 700 $a contributor when there is no 100 and no
+  700 $4=aut (e.g. ``leises-gift``, whose contributors are all $4=ctb). The
+  author is usually listed first; this is a best-effort heuristic that can
+  misattribute when another contributor appears first.
 """
 
 from __future__ import annotations
@@ -62,7 +63,18 @@ def _author(record) -> str:
     main = _first_subfield(record, "100", "a")
     if main:
         return main
-    return _name_with_relator(record, "aut")
+    by_relator = _name_with_relator(record, "aut")
+    if by_relator:
+        return by_relator
+    # Last resort: first 700 contributor. Heuristic — when there is no 100 and
+    # no 700 $4=aut (e.g. ctb-only audiobook records) the author is usually
+    # listed first, but this can misattribute if another contributor appears
+    # first. Better a best-effort author than none for ABS matching.
+    for field in record.get_fields("700"):
+        name = _clean(field["a"])
+        if name:
+            return name
+    return ""
 
 
 def _publisher(record) -> str:
