@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 Versioning: [Semantic Versioning](https://semver.org/)
+## [0.1.1] - 2026-06-08
+
+### Added
+
+- Add /health liveness route
+- Author falls back to first 700 contributor
+
+### Documentation
+
+- Openspec proposal for v0.1.1
 ## [0.1.0] - 2026-06-08
 
 ### Added
@@ -22,6 +32,7 @@ Versioning: [Semantic Versioning](https://semver.org/)
 - README + openspec design/spec
 - Auto-generate changelog via git-cliff
 - Document pre-commit + mise setup
+- Regenerate changelog for v0.1.0
 
 ### Build & CI
 
