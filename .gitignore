@@ -6,3 +6,7 @@ dist/
 .pytest_cache/
 .mypy_cache/
 *.egg-info/
+
+# harness / plugin skill caches (not part of this project)
+.pi/
+.claude/skills/
