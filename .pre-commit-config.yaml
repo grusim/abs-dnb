@@ -1,0 +1,58 @@
+# Pre-commit hooks. See https://pre-commit.com.
+#   Install:  uv run pre-commit install --install-hooks
+#   Run all:  uv run pre-commit run --all-files
+#   Update:   uv run pre-commit autoupdate
+default_install_hook_types: [pre-commit, commit-msg]
+
+repos:
+  # General hygiene
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      # Fixtures are verbatim DNB API captures — keep them byte-faithful.
+      - id: trailing-whitespace
+        exclude: ^tests/fixtures/
+      - id: end-of-file-fixer
+        exclude: ^tests/fixtures/
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: detect-private-key
+      - id: mixed-line-ending
+        exclude: ^tests/fixtures/
+
+  # Secret scanning
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  # Python lint + format
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.16
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  # Validate CI / Dependabot config against their JSON schemas
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.37.2
+    hooks:
+      - id: check-github-workflows
+      - id: check-dependabot
+
+  # Dockerfile lint (runs via docker; only when the Dockerfile changes)
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.14.0
+    hooks:
+      - id: hadolint-docker
+
+  # Enforce Conventional Commits (feeds the git-cliff changelog)
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
