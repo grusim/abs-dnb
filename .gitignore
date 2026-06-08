@@ -9,6 +9,23 @@ dist/
 
 
 # openspec-generated per-tool integration files — regenerate via `openspec update`
-.claude/skills/openspec-*/
-.claude/commands/opsx/
+.claude/
 .pi/
+
+# never commit local harness settings (keep the rest of .claude/ tracked)
+.claude/settings.local.json
+
+# test coverage artifacts
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# uv atomic-write temp locks (but keep the real lockfile)
+uv-*.lock
+!uv.lock
+
+# macOS / local env
+.DS_Store
+.env
+.env.*
