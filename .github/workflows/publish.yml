@@ -12,7 +12,21 @@ env:
   IMAGE: docker.io/grusim/abs-dnb
 
 jobs:
+  # Gate the publish on a green test run — a tagged-but-broken commit must not ship.
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
+        with:
+          enable-cache: true
+      - run: uv sync
+      - run: uv run pytest -q
+
   publish:
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: write # create the GitHub Release for the tag
