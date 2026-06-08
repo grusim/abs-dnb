@@ -129,10 +129,14 @@ def _media_type(record) -> str | None:
         - otherwise (``nc`` volume, etc.)  -> ``print`` (Taschenbuch/Hardcover)
     """
     content = {
-        v.strip() for field in record.get_fields("336") for v in field.get_subfields("b")
+        v.strip()
+        for field in record.get_fields("336")
+        for v in field.get_subfields("b")
     }
     carrier = {
-        v.strip() for field in record.get_fields("338") for v in field.get_subfields("b")
+        v.strip()
+        for field in record.get_fields("338")
+        for v in field.get_subfields("b")
     }
     leader = str(record.leader or "")
     leader6 = leader[6] if len(leader) > 6 else ""

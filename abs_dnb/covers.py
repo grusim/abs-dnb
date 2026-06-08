@@ -20,7 +20,9 @@ import logging
 
 import httpx
 
-AMAZON_URL = "https://images-na.ssl-images-amazon.com/images/P/{isbn10}.01._SCLZZZZZZZ_.jpg"
+AMAZON_URL = (
+    "https://images-na.ssl-images-amazon.com/images/P/{isbn10}.01._SCLZZZZZZZ_.jpg"
+)
 ITUNES_URL = "https://itunes.apple.com/search"
 COVER_MIN_BYTES = 1024
 DEFAULT_TIMEOUT = 10.0

@@ -1,7 +1,6 @@
 """Unit tests for the cover fallback chain (Amazon -> iTunes -> omit)."""
 
 import httpx
-import pytest
 import respx
 
 from abs_dnb.covers import (
@@ -51,7 +50,9 @@ async def test_amazon_placeholder_rejected_then_itunes_used():
             },
         )
     )
-    cover = await resolve_cover({"isbn": ISBN13, "title": "Leises Gift", "author": "Iles"})
+    cover = await resolve_cover(
+        {"isbn": ISBN13, "title": "Leises Gift", "author": "Iles"}
+    )
     assert cover == "https://is1.mzstatic.com/image/600x600bb.jpg"
 
 

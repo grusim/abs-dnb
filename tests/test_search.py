@@ -114,7 +114,9 @@ async def test_format_filter_ebook_excludes_audiobooks(client, saeulen):
 async def test_format_filter_german_alias_taschenbuch(client, tintenherz):
     respx.get(SRU_BASE).mock(return_value=httpx.Response(200, content=tintenherz))
     async with client as c:
-        resp = await c.get("/search", params={"query": "Tintenherz", "format": "Taschenbuch"})
+        resp = await c.get(
+            "/search", params={"query": "Tintenherz", "format": "Taschenbuch"}
+        )
     body = resp.json()
     assert resp.status_code == 200
     assert len(body["matches"]) == 5
@@ -134,9 +136,7 @@ async def test_unknown_format_is_ignored(client, tintenherz):
 async def test_language_filter_opt_in(client, saeulen):
     respx.get(SRU_BASE).mock(return_value=httpx.Response(200, content=saeulen))
     async with client as c:
-        resp = await c.get(
-            "/search", params={"query": "Säulen", "language": "ger"}
-        )
+        resp = await c.get("/search", params={"query": "Säulen", "language": "ger"})
     body = resp.json()
     assert resp.status_code == 200
     assert len(body["matches"]) == 3  # all saeulen records are 'ger'
