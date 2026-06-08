@@ -10,6 +10,7 @@ header is accepted and ignored. Do not expose this service to the public interne
 from __future__ import annotations
 
 from collections.abc import Awaitable, Callable
+from importlib.metadata import PackageNotFoundError, version
 
 from fastapi import Depends, FastAPI, Query
 
@@ -18,9 +19,14 @@ from .covers import resolve_cover
 
 CoverResolver = Callable[[dict], Awaitable[str | None]]
 
+try:
+    APP_VERSION = version("abs-dnb")  # single source of truth: pyproject.toml
+except PackageNotFoundError:  # running from source without an install
+    APP_VERSION = "0+unknown"
+
 app = FastAPI(
     title="abs-dnb",
-    version="0.1.0",
+    version=APP_VERSION,
     description="Audiobookshelf metadata provider backed by the Deutsche Nationalbibliothek.",
 )
 
@@ -31,8 +37,15 @@ def get_cover_resolver() -> CoverResolver:
 
 
 @app.get("/")
+async def root() -> dict:
+    return {"status": "ok", "service": "abs-dnb", "version": APP_VERSION}
+
+
+@app.get("/health")
 async def health() -> dict:
-    return {"status": "ok", "service": "abs-dnb", "version": "0.1.0"}
+    # Pure liveness check: always 200, never touches DNB/Amazon/iTunes. An
+    # upstream outage must not mark the container unhealthy (liveness != deps).
+    return {"status": "ok"}
 
 
 @app.get("/search")

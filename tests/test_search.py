@@ -25,6 +25,14 @@ def client():
     app.dependency_overrides.clear()
 
 
+async def test_health_is_pure_liveness(client):
+    # No network mock: /health must return 200 without touching any upstream.
+    async with client as c:
+        resp = await c.get("/health")
+    assert resp.status_code == 200
+    assert resp.json() == {"status": "ok"}
+
+
 async def test_missing_query_returns_422(client):
     async with client as c:
         resp = await c.get("/search")
