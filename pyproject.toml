@@ -1,6 +1,6 @@
 [project]
 name = "abs-dnb"
-version = "0.1.1"
+version = "0.1.2"
 description = "Audiobookshelf custom metadata provider sourcing German editions from the Deutsche Nationalbibliothek SRU API"
 readme = "README.md"
 requires-python = ">=3.12"

@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 Versioning: [Semantic Versioning](https://semver.org/)
+## [0.1.2] - 2026-06-08
+
+### Fixed
+
+- Harden /search — never 500, TIT/PER query, concurrent covers
+
+### Documentation
+
+- Openspec harden-search + query strategy
 ## [0.1.1] - 2026-06-08
 
 ### Added
@@ -14,6 +23,11 @@ Versioning: [Semantic Versioning](https://semver.org/)
 ### Documentation
 
 - Openspec proposal for v0.1.1
+
+### Build & CI
+
+- Run tests + lint on push and PR
+- Gate publish on green tests
 ## [0.1.0] - 2026-06-08
 
 ### Added
