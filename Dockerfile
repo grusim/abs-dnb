@@ -1,13 +1,13 @@
-# Single-stage image on Alpine. Python pinned to 3.12 (laptop default is 3.14,
-# on which some wheels resolve poorly) per design.md "Runtime packaging".
+# Single-stage image on Alpine, Python 3.14 (current release).
 #
-# Base is python:3.12-alpine rather than -slim: the Debian slim image ships
+# Base is python:3.14-alpine rather than -slim: the Debian slim image ships
 # `perl-base` 5.40.1 (Essential, cannot be removed) which carries two
 # upstream-unfixed HIGH CVEs (CVE-2026-48959, CVE-2026-48962). Alpine ships no
 # perl, yielding a clean `docker scout cves` (0C/0H/0M/0L, verified 2026-06-08)
 # and a smaller image. The musl wheels for pydantic-core/uvloop resolve cleanly
-# and the full test suite passes inside the image.
-FROM python:3.12-alpine
+# on 3.13 and 3.14, and the full test suite passes inside the image (verified
+# 2026-06-09).
+FROM python:3.14-alpine
 
 # uv for deterministic, cache-friendly dependency install.
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
