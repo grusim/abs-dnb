@@ -8,7 +8,7 @@ license = { text = "MIT" }
 authors = [{ name = "grusim" }]
 dependencies = [
     "fastapi>=0.115",
-    "uvicorn[standard]>=0.32",
+    "uvicorn[standard]>=0.49.0",
     "httpx>=0.27",
     "pymarc>=5.2",
 ]
