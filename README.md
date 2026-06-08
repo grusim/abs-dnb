@@ -54,8 +54,10 @@ cover sources.
 
 ## CI / Publishing
 
-Images are published to `docker.io/grusim/abs-dnb` on `v*` tag pushes via
-GitHub Actions. The workflow requires **one** repository secret:
+Pushing a `v*` tag triggers one GitHub Actions workflow that both publishes the
+image to `docker.io/grusim/abs-dnb` and cuts a matching GitHub Release (notes
+auto-generated from commits since the previous tag, plus the image digest and
+verification command). The workflow requires **one** repository secret:
 
 - `DOCKERHUB_TOKEN` — a Docker Hub personal access token with Read & Write
   scope (Docker Hub → Account settings → Personal access tokens → Generate).

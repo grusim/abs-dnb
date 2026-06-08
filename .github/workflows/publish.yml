@@ -1,8 +1,8 @@
 name: publish
 
 # Builds and publishes a multi-arch, provenance + SBOM attested, cosign-signed
-# image to Docker Hub on every v* tag. Requires repo secrets DOCKERHUB_USERNAME
-# and DOCKERHUB_TOKEN (a read+write scoped PAT) to be set before tagging.
+# image to Docker Hub and cuts a GitHub Release on every v* tag. Requires repo
+# secret DOCKERHUB_TOKEN (a read+write scoped PAT) to be set before tagging.
 on:
   push:
     tags:
@@ -15,7 +15,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write # create the GitHub Release for the tag
       id-token: write # cosign keyless signing via GitHub OIDC
     steps:
       - uses: actions/checkout@v4
@@ -60,3 +60,22 @@ jobs:
         env:
           DIGEST: ${{ steps.build.outputs.digest }}
         run: cosign sign --yes "${IMAGE}@${DIGEST}"
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          # Release is cut for the triggering tag; notes auto-generated from
+          # commits/PRs since the previous tag, plus the image coordinates.
+          generate_release_notes: true
+          body: |
+            **Docker image:** `${{ env.IMAGE }}:${{ steps.meta.outputs.version }}`
+            **Digest:** `${{ steps.build.outputs.digest }}`
+
+            Multi-arch (`linux/amd64`, `linux/arm64`), provenance + SBOM attested, cosign-signed.
+
+            Verify the signature:
+            ```bash
+            cosign verify ${{ env.IMAGE }}:${{ steps.meta.outputs.version }} \
+              --certificate-identity-regexp 'github.com/grusim/abs-dnb' \
+              --certificate-oidc-issuer 'https://token.actions.githubusercontent.com'
+            ```
