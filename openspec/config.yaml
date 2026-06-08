@@ -1,0 +1,7 @@
+schema: spec-driven
+
+# context: |
+#   Tech stack: Python 3.12, FastAPI, uvicorn, httpx, pymarc
+#   Runtime: single-container Docker image (grusim/abs-dnb), multi-arch via buildx
+#   Domain: ABS custom metadata provider — German-edition books via DNB SRU + keyless cover chain
+#   Conventions: conventional commits, uv for dependency management, pytest for tests
