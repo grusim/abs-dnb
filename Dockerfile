@@ -7,7 +7,7 @@
 # perl, yielding a clean `docker scout cves` (0C/0H/0M/0L, verified 2026-06-08)
 # and a smaller image. The musl wheels for pydantic-core/uvloop resolve cleanly
 # and the full test suite passes inside the image.
-FROM python:3.12-alpine
+FROM python:3.14-alpine
 
 # uv for deterministic, cache-friendly dependency install.
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
