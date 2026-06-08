@@ -7,6 +7,8 @@ dist/
 .mypy_cache/
 *.egg-info/
 
-# harness / plugin skill caches (not part of this project)
+
+# openspec-generated per-tool integration files — regenerate via `openspec update`
+.claude/skills/openspec-*/
+.claude/commands/opsx/
 .pi/
-.claude/skills/
