@@ -16,10 +16,15 @@ a worked example.
 
 1. Fork and clone the repo.
 2. `uv sync` to install dependencies.
-3. Write tests first (fixtures are in `tests/fixtures/` — do not delete them).
-4. `uv run pytest` — keep it green.
-5. Open a PR with a clear description of what changes and why.
+3. `uv run pre-commit install --install-hooks` to enable the git hooks
+   (gitleaks, ruff, hadolint, conventional-commit check). With mise:
+   `mise run setup`.
+4. Write tests first (fixtures are in `tests/fixtures/` — do not delete them).
+5. `uv run pytest` (or `mise run test`) — keep it green.
+6. Open a PR with a clear description of what changes and why.
 
 ## Commit style
 
 Conventional Commits, terse subject (≤ 50 chars), short body if needed.
+This is enforced by a `commit-msg` pre-commit hook and feeds the
+git-cliff-generated `CHANGELOG.md`.

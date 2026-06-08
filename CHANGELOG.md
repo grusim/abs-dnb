@@ -24,4 +24,3 @@ Versioning: [Semantic Versioning](https://semver.org/)
 - Publish signed multi-arch image on tags
 - Cut GitHub Release on tag publish
 - Pin actions to commit SHA (supply chain)
-

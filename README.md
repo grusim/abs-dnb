@@ -45,6 +45,28 @@ Expect rough edges; file issues on GitHub.
 iTunes endpoints. These are unofficial, undocumented interfaces that may change
 without notice. No cover is returned rather than a broken URL.
 
+## Development
+
+```bash
+uv sync                                      # install deps (incl. dev group)
+uv run pre-commit install --install-hooks    # wire up the git hooks
+uv run pytest                                # run the test suite
+```
+
+`pre-commit install` registers both a `pre-commit` and a `commit-msg` git hook,
+so the checks fire automatically on every `git commit`. Configured hooks
+(`.pre-commit-config.yaml`): gitleaks (secret scan), ruff (lint + format),
+hadolint (Dockerfile), check-jsonschema (workflows/Dependabot), and a
+Conventional Commits check on the message. Run them all on demand with:
+
+```bash
+uv run pre-commit run --all-files
+```
+
+Optionally, with [mise](https://mise.jdx.dev) (pins Python 3.12 + git-cliff via
+`.mise.toml`): `mise run setup` (deps + hooks), `mise run test`, `mise run lint`,
+`mise run changelog` (regenerate `CHANGELOG.md` from Conventional Commits).
+
 ## Design and specifications
 
 Architecture decisions and requirements live under [`openspec/`](openspec/).
