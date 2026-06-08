@@ -21,6 +21,13 @@ run = [
 description = "Run the test suite"
 run = "uv run pytest"
 
+[tasks.format]
+description = "Format and autofix the codebase (ruff)"
+run = [
+  "uv run ruff format .",
+  "uv run ruff check --fix .",
+]
+
 [tasks.lint]
 description = "Run all pre-commit checks (lint, format, secret scan)"
 run = "uv run pre-commit run --all-files"
