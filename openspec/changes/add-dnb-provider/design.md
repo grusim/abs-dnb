@@ -36,12 +36,14 @@ English-language APIs.
 DNB SRU endpoint: `https://services.dnb.de/sru/dnb`, SRU 1.1, CQL,
 `recordSchema=MARC21-xml`, `maximumRecords` ≤ 100. Keyless; no registration.
 
-Verified live (2026-06-08): `WOE=<title author words>` all-words index
-returns correct records (probe "Leises Gift Iles" → 1 hit, MARC21-xml
-delivered). Precise title (`TIT=`) / creator (`VER=`) index refinement is
-deferred to the build agent; the builder should test both strategies against
-fixtures (`leises-gift.xml`, `saeulen.xml`, `tintenherz.xml`, `vorleser.xml`)
-and pick the one with the best precision/recall trade-off.
+Query strategy (revised v0.1.2, verified live 2026-06-09): precise indices
+`TIT=<title>` plus `PER=<author>` when an author is given, else `TIT=<title>`.
+The all-words `WOE=` index (v0.1.0) missed records these find — e.g.
+"Kein Espresso für Commissario Luciani" / Paglieri returned **0** under `WOE`
+but **5** under `TIT=… and PER=…`, and "Das Geheimnis der Hebamme" / Ebert
+returned **0 → 25**; existing probes also gained recall (Leises Gift / Iles
+1 → 10). When `TIT=… and PER=…` yields no records (the author may be a name
+variant or absent), the search retries `TIT=` alone before giving up.
 
 ### MARC21 → ABS BookMetadata mapping
 
@@ -137,8 +139,9 @@ Public project. Copyright (c) 2026 grusim. No warranty.
 
 ## Open Questions
 
-- Should precise DNB CQL indexes (`TIT=`, `VER=`) replace `WOE=` for better
-  recall? Build agent to test against fixtures and decide.
+- ~~Should precise DNB CQL indexes replace `WOE=` for better recall?~~
+  **Resolved (v0.1.2):** yes — `TIT=`/`PER=` with a `TIT=`-only fallback. See
+  the CQL query strategy decision above.
 - Should a `language` query parameter filter results to `ger` by default, or
   leave filtering to ABS? Lean toward opt-in filter; evaluate during build.
 - Should translator (700 $4=`trl`) be surfaced as a tag or silently dropped?
