@@ -45,6 +45,7 @@ commit_parsers = [
   { message = "^build", group = "<!-- 5 -->Build & CI" },
   { message = "^ci", group = "<!-- 5 -->Build & CI" },
   { message = "^test", skip = true },
+  { message = "^style", skip = true },
   { message = "^chore", skip = true },
 ]
 filter_commits = false

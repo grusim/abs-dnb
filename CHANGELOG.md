@@ -13,9 +13,15 @@ Versioning: [Semantic Versioning](https://semver.org/)
 - Keyless cover chain (Amazon, iTunes)
 - DNB SRU client + search API
 
+### Fixed
+
+- Let uv own python, drop from mise
+
 ### Documentation
 
 - README + openspec design/spec
+- Auto-generate changelog via git-cliff
+- Document pre-commit + mise setup
 
 ### Build & CI
 
@@ -24,3 +30,8 @@ Versioning: [Semantic Versioning](https://semver.org/)
 - Publish signed multi-arch image on tags
 - Cut GitHub Release on tag publish
 - Pin actions to commit SHA (supply chain)
+- Add Dependabot (actions, uv, docker)
+- Add pre-commit hooks
+- Add mise dev tooling + tasks
+- Bump runtime to Python 3.14
+- Add ruff format task + venv ruff
