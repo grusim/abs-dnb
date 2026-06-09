@@ -7,4 +7,4 @@
 - [x] Tests: Harry Potter → 200; Hebamme/Ebert, Paglieri → ≥1; many-result < 2s
       (concurrency). Fixtures captured. `uv run pytest` green (41).
 - [x] Update `design.md` query strategy + resolve the open question.
-- [ ] Bump `0.1.2`, regenerate changelog, tag `v0.1.2` → CI publishes.
+- [x] Bump `0.1.2`, regenerate changelog, tag `v0.1.2` → CI publishes.

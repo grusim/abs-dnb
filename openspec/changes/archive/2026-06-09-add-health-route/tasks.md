@@ -7,5 +7,5 @@
 - [x] Tests: `test_health_is_pure_liveness`; update leises-gift author test to
       expect the contributor fallback. `uv run pytest` green (32).
 - [x] Update `marc.py` mapping docstring to describe the fallback.
-- [ ] Regenerate `CHANGELOG.md` for `0.1.1`.
-- [ ] Tag `v0.1.1` → CI builds+pushes `grusim/abs-dnb:0.1.1` + GitHub Release.
+- [x] Regenerate `CHANGELOG.md` for `0.1.1`.
+- [x] Tag `v0.1.1` → CI builds+pushes `grusim/abs-dnb:0.1.1` + GitHub Release.
